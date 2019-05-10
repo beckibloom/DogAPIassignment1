@@ -6,21 +6,18 @@ function getDogImage() {
         .then(responseJson => 
             generateDogImage(responseJson))
         .catch(error => alert('Uh oh! No doggies are available at this moment. So sorry. :('));
-    console.log('getDogImage ran.');
 }
 
 function renderDogImage(imagesCode) {
-    // Put the dog image html into the DOM after generateDogImage runs
     $('.results').removeClass('hidden');
-    console.log('renderDogImage ran.');
-    $('.results-images').appendChild(imagesCode);
+    $('.results-images').append(imagesCode);
 }
 
 function generateDogImage(responseJson) {
     console.log(responseJson);
     // let imagesCode = `<img src="${responseJson.message}" class="results-img">`;
-    let imagesCode = '<p>this is a picture of a dog</p>';
-    renderDogImage(imagesCode);
+    // renderDogImage(imagesCode);
+    renderDogImage();
 }
 
 function watchForm() {
