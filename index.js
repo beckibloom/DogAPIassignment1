@@ -15,9 +15,8 @@ function renderDogImage(imagesCode) {
 
 function generateDogImage(responseJson) {
     console.log(responseJson);
-    // let imagesCode = `<img src="${responseJson.message}" class="results-img">`;
-    // renderDogImage(imagesCode);
-    renderDogImage();
+    let imagesCode = `<img src="${responseJson.message}" class="results-img">`;
+    renderDogImage(imagesCode);
 }
 
 function watchForm() {
